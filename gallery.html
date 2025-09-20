@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gallery | FundsHQ</title>
+<link rel="stylesheet" href="styles.css" />
+<script defer src="script.js"></script>
+<meta name="description" content="Meet the FundsHQ team and see our fintech impact." />
+<style>
+  .grid-row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .profile-card, .product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    max-width: 300px;
+    text-align: center;
+    color: var(--primary-dark);
+    transition: transform 0.25s ease;
+  }
+  .profile-card:hover, .product-card:hover {
+    transform: scale(1.06);
+  }
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 12px;
+  }
+  .circle-icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--primary-green);
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .profile-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0.3rem;
+  }
+  .profile-role {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+  .product-description {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+</style>
+</head>
+<body>
+<header class="container" role="banner">
+  <h1>FundsHQ Team & Impact</h1>
+  <nav aria-label="Main navigation">
+    <ul class="nav-menu">
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="about.html">ℹ️ About</a></li>
+      <li><a href="bizz-branch.html">📊 Bizz Branch</a></li>
+      <li><a href="sacco-branch.html">🤝 SACCO Branch</a></li>
+      <li><a href="gallery.html" aria-current="page">🖼️ Gallery</a></li>
+      <li><a href="contact.html">✉️ Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="container" role="main" aria-label="FundsHQ Gallery">
+  <section class="grid-row" aria-label="Team Profiles">
+    <div class="profile-card" role="group" aria-label="Donie Paul">
+      <img class="profile-photo" src="https://drive.google.com/thumbnail?id=14O0HSqmWnATqJqJXN0Z2HmeuduZYRKQQ&sz=120" alt="Donie Paul" />
+      <h3 class="profile-name"><span class="circle-icon"></span>Donie Paul</h3>
+      <p class="profile-role">Multidisciplinary fintech expert driving growth & equity.</p>
+    </div>
+    <div class="profile-card" role="group" aria-label="Staff Member 1">
+      <img class="profile-photo" src="https://via.placeholder.com/120" alt="Staff Member 1" />
+      <h3 class="profile-name"><span class="circle-icon"></span>Staff Member 1</h3>
+      <p class="profile-role">Fintech developer & UI/UX specialist.</p>
+    </div>
+    <div class="profile-card" role="group" aria-label="Staff Member 2">
+      <img class="profile-photo" src="https://via.placeholder.com/120" alt="Staff Member 2" />
+      <h3 class="profile-name"><span class="circle-icon"></span>Staff Member 2</h3>
+      <p class="profile-role">Community & outreach professional.</p>
+    </div>
+  </section>
+  <section class="grid-row" aria-label="Product Use Cases">
+    <div class="product-card" role="group" aria-label="Real-Time Contributions">
+      <h4>Real-Time Contributions</h4>
+      <p class="product-description">Instant payment records synced with MPESA for transparency.</p>
+    </div>
+    <div class="product-card" role="group" aria-label="Automated Reminders">
+      <h4>Automated Reminders</h4>
+      <p class="product-description">SMS and WhatsApp reminders boost payment rates and engagement.</p>
+    </div>
+    <div class="product-card" role="group" aria-label="Community Marketplace">
+      <h4>Community Marketplace</h4>
+      <p class="product-description">Buy/Sell forum securely connecting micro & small businesses.</p>
+    </div>
+  </section>
+</main>
+<footer class="container" role="contentinfo">
+  <p>© 2025 FundsHQ</p>
+</footer>
+</body>
+</html>

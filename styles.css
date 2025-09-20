@@ -1,0 +1,313 @@
+:root {
+  --primary-green:#50c878;
+  --primary-silver:#c0c0c0;
+  --primary-dark:#0a2540;
+  --background-light:#f5f7fa;
+  --background-dark:#0f121a;
+  --accent-light:#a6deb9;
+  --accent-dark:#3e8e41;
+
+  --font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --border-radius:8px;
+  --transition-speed:.25s ease-in-out;
+  --box-shadow:0 2px 8px rgba(80,200,120,.3);
+
+  --max-width:1120px;
+  --gutter:20px;
+
+  --heading-color:var(--primary-green);
+  --text-color:var(--primary-dark);
+  --text-muted:#666
+}
+
+*,*::before,*::after{box-sizing:border-box}
+
+body {
+  margin:0;
+  font-family:var(--font-family);
+  background:var(--background-light);
+  color:var(--text-color);
+  line-height:1.6;
+  min-height:100vh;
+  transition:background var(--transition-speed),color var(--transition-speed)
+}
+
+.dark-theme {
+  background:var(--background-dark);
+  color:var(--primary-silver)
+}
+
+a {
+  color:var(--primary-green);
+  text-decoration:none;
+  transition:color var(--transition-speed)
+}
+
+a:hover,a:focus {
+  color:var(--accent-dark);
+  outline:none;
+  text-decoration:underline
+}
+
+.container {
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 var(--gutter)
+}
+
+header {
+  background:var(--primary-green);
+  color:#fff;
+  padding:1.8rem var(--gutter);
+  text-align:center;
+  box-shadow:var(--box-shadow);
+  user-select:none
+}
+
+header h1 {
+  margin:0;
+  font-weight:700;
+  font-size:2.8rem;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  line-height:1.1
+}
+
+header p {
+  font-weight:400;
+  font-size:1.2rem;
+  opacity:.85;
+  margin-top:.4rem
+}
+
+.nav-menu {
+  list-style:none;
+  padding:0;
+  margin-top:1rem;
+  display:flex;
+  gap:15px;
+  justify-content:center
+}
+
+.nav-menu li a {
+  color:#fff;
+  font-weight:600;
+  padding:6px 12px;
+  border-radius:4px;
+  transition:background-color .3s ease
+}
+
+.nav-menu li a:hover,
+.nav-menu li a[aria-current="page"] {
+  background-color:var(--accent-dark);
+  outline:none;
+  text-decoration:none
+}
+
+section {
+  background:#fff;
+  border-radius:var(--border-radius);
+  box-shadow:var(--box-shadow);
+  margin:2rem 0;
+  transition:background-color var(--transition-speed),color var(--transition-speed);
+  padding:1.5rem 2rem;
+  color:var(--primary-dark)
+}
+
+.dark-theme section {
+  background:#1a2538;
+  color:var(--primary-silver)
+}
+
+.section-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+  user-select:none;
+  background:var(--primary-green);
+  padding:12px 18px;
+  border-radius:var(--border-radius) var(--border-radius) 0 0;
+  color:#fff;
+  box-shadow:var(--box-shadow);
+  transition:background-color .3s ease,transform .3s ease;
+  font-weight:600
+}
+
+.section-header:hover {
+  transform:scale(1.03);
+  background-color:var(--accent-dark)
+}
+
+.section-header:focus {
+  outline:2px dashed #fff;
+  outline-offset:4px
+}
+
+.see-more {
+  font-size:0.9rem;
+  font-weight:500;
+  color:#dadedfdd;
+  transition:color .3s ease
+}
+
+.section-header:hover .see-more {
+  color:#a8e6a8dd
+}
+
+.section-content {
+  background:var(--background-light);
+  border-radius:0 0 var(--border-radius) var(--border-radius);
+  padding:1rem 1.2rem 1.5rem 1.2rem;
+  display:none;
+  line-height:1.5;
+  box-shadow:inset 0 1px 3px #eee;
+  transition:max-height .35s ease;
+  color:var(--primary-dark)
+}
+
+.section-content.active {
+  display:block
+}
+
+button,
+a.btn {
+  background:var(--primary-green);
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  padding:.7rem 1.4rem;
+  font-size:1rem;
+  cursor:pointer;
+  box-shadow:var(--box-shadow);
+  transition:background-color var(--transition-speed),transform .2s ease;
+  text-align:center;
+  display:inline-block;
+  user-select:none
+}
+
+button:hover,
+a.btn:hover,
+button:focus,
+a.btn:focus {
+  background-color:var(--accent-dark);
+  outline:none;
+  transform:scale(1.07)
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width:100%;
+  padding:.7rem 1rem;
+  margin-bottom:1rem;
+  border:2px solid var(--primary-green);
+  border-radius:5px;
+  font-size:1rem;
+  color:var(--text-color);
+  background:#fff;
+  transition:border-color var(--transition-speed);
+  font-family:var(--font-family)
+}
+
+.dark-theme form input[type="text"],
+.dark-theme form input[type="email"],
+.dark-theme form textarea {
+  background:#2a3b5c;
+  border-color:var(--accent-light);
+  color:var(--primary-silver)
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+  outline:none;
+  border-color:var(--accent-dark)
+}
+
+form textarea {
+  resize:vertical;
+  min-height:120px
+}
+
+footer {
+  text-align:center;
+  padding:1.4rem 0;
+  background:var(--primary-green);
+  color:#fff;
+  user-select:none;
+  font-weight:600;
+  font-size:1rem;
+  box-shadow:var(--box-shadow)
+}
+
+.theme-toggle-box {
+  position:fixed;
+  top:16px;
+  left:16px;
+  background:var(--primary-green);
+  color:#fff;
+  border-radius:6px;
+  padding:6px 12px;
+  box-shadow:var(--box-shadow);
+  cursor:pointer;
+  user-select:none;
+  z-index:1000;
+  font-family:var(--font-family);
+  display:flex;
+  align-items:center;
+  gap:8px;
+  transition:background-color var(--transition-speed)
+}
+
+.theme-toggle-box:hover {
+  background-color:var(--accent-dark)
+}
+
+#accentPicker {
+  width:26px;
+  height:22px;
+  border:none;
+  cursor:pointer;
+  border-radius:4px;
+  box-shadow:0 0 8px var(--primary-green);
+  outline-offset:2px
+}
+
+@media (max-width:768px) {
+  .container {
+    padding:0 12px
+  }
+  header h1 {
+    font-size:2rem
+  }
+  section {
+    padding:1.5rem 1.6rem
+  }
+  .section-header h2 {
+    font-size:1.5rem
+  }
+  button,
+  a.btn {
+    font-size:0.9rem;
+    padding:.6rem 1.1rem
+  }
+  .nav-menu {
+    flex-direction:column;
+    gap:8px
+  }
+}
+
+body.user-is-tabbing :focus-visible {
+  outline:2px dashed var(--primary-green);
+  outline-offset:3px;
+  transition:outline-offset .2s ease
+}
+
+.profile-card:hover,
+.product-card:hover,
+button:hover,
+a.btn:hover {
+  transform:scale(1.06);
+  transition:transform .2s ease
+}

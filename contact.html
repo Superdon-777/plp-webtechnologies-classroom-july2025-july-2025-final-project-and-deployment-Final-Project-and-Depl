@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Contact FundsHQ</title>
+<link rel="stylesheet" href="styles.css" />
+<script defer src="script.js"></script>
+<meta name="description" content="Contact FundsHQ for help and support via email and WhatsApp."/>
+</head>
+<body>
+<header class="container" role="banner">
+  <h1>Contact FundsHQ</h1>
+  <nav aria-label="Main navigation">
+    <ul class="nav-menu">
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="about.html">ℹ️ About</a></li>
+      <li><a href="bizz-branch.html">📊 Bizz Branch</a></li>
+      <li><a href="sacco-branch.html">🤝 SACCO Branch</a></li>
+      <li><a href="gallery.html">🖼️ Gallery</a></li>
+      <li><a href="contact.html" aria-current="page">✉️ Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="container" role="main" aria-label="Contact FundsHQ">
+  <section>
+    <div class="section-header" tabindex="0" role="button" aria-expanded="false" aria-controls="contact-info-content">
+      <h2>Reach Us</h2><div class="see-more">See More</div>
+    </div>
+    <div class="section-content" id="contact-info-content" hidden>
+      <ul>
+        <li>✉️ Email: <a href="mailto:fundshq@gmail.com">fundshq@gmail.com</a></li>
+        <li>📲 WhatsApp: <a href="https://wa.me/254726025635" target="_blank" rel="noopener noreferrer">+254 726 025 635</a></li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div class="section-header" tabindex="0" role="button" aria-expanded="false" aria-controls="contact-form-content">
+      <h2>Send a Message</h2><div class="see-more">See More</div>
+    </div>
+    <div class="section-content" id="contact-form-content" hidden>
+      <form id="contactForm" aria-label="Contact FundsHQ Support Form" onsubmit="submitForm(event)">
+        <label for="name">Name</label><input id="name" name="name" type="text" required placeholder="Your full name"/>
+        <label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@example.com"/>
+        <label for="message">Message</label><textarea id="message" name="message" required placeholder="Your message here..."></textarea>
+        <button type="submit" aria-label="Send message to FundsHQ">Send Message</button>
+        <p id="confirmation" class="confirmation-message" aria-live="polite" style="margin-top:10px; display:none; color: var(--primary-green)"></p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="container" role="contentinfo">
+  <p>© 2025 FundsHQ</p>
+</footer>
+</body>
+</html>
